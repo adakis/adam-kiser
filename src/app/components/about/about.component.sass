@@ -1,0 +1,54 @@
+section
+    background: #c20025
+    width: 100%
+    height: 100%
+    display: flex
+.container
+    display: flex
+    width: 100%
+.me-image
+    position: relative
+    .photo
+        postion: absolute
+        top: 0
+        left: 0
+        max-width: 100%
+    .me
+        position: absolute
+        top: 100px
+        left: 100px
+        animation: 2s ease meAnimation infinite
+.content
+    width: 100%
+    color: #ffffff
+    font-size: 18px
+    .signiture
+        float: right        
+    .hobbies
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        width: 100%
+        img
+            margin: 5px
+            border: 2px solid #ffffff
+            border-radius: 50%
+@keyframes meAnimation
+    0%
+        transform: translateY(0px) translateX(0px)
+    50%
+        transform: translateY(5px) translateX(5px)
+    100%
+        transform: translateY(0px) translateX(0px)
+@media (max-width: 960px)
+    section
+        padding: 100px 0
+    .container
+        // margin: 100px auto
+        flex-direction: column
+        padding: 10px
+    .me-image
+        margin: auto
+@media (min-width: 960px)
+    .me-image        
+        width: 100%

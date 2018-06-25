@@ -1,0 +1,29 @@
+<section>
+  <div class="container">
+    <h1>Let's talk!</h1>
+  <form action="" ngNoForm>
+    <div class="row">
+
+    
+    <div class="form-group">
+        <input type="text" [(ngModel)]="name" id="name">
+        <label for="name" [class]="name ? 'active' : null">Name</label>
+      </div>
+    <div class="form-group">
+        <input type="email" [(ngModel)]="email" id="email">
+        <label for="email" [class]="email ? 'active' : null">Email</label>
+    </div>
+  </div>
+  <div class="row">
+      <div class="form-group">
+          <textarea name="message" [(ngModel)]="message" id="" cols="100%" rows="10" id="message"></textarea>
+          <label for="message" [class]="message ? 'active' : null">Message</label>
+      </div>
+  </div>
+  <div class="row">
+      <button class="cta" type="submit">SUBMIT</button>
+  </div>
+
+  </form>
+</div>
+</section>

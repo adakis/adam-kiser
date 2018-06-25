@@ -1,0 +1,79 @@
+.resume
+    padding: 100px 0
+    .container
+        display: flex
+    section
+        position: relative
+        h1
+            margin-bottom: 0
+            transform: rotateZ(-90deg)
+            position: absolute
+            left: -140px
+            top: 90px
+            font-size: 40px
+            width: 300px
+            text-align: right
+        .content
+            margin-left: 50px
+        .double-high
+            height: 300px
+            .content-section
+                margin-bottom: 50px
+     
+    .aside
+        width: 300px
+        position: relative
+        section
+            position: relative
+            margin-bottom: 50px
+            .content
+                p
+                    margin-left: 0px
+                .skill
+                    font-weight: bold
+                    margin-top: 10px
+                .skill-level-container
+                    display: flex
+                .dot
+                    border-radius: 50%
+                    border: 2px solid black
+                    width: 10px
+                    height: 10px
+                    margin: 5px
+                    margin-left: 10px
+                .dot-filled
+                    margin-right: 5px
+                    border-radius: 50%
+                    border: 2px solid black
+                    width: 10px
+                    height: 10px
+                    background: black
+                    margin: 5px
+                    margin-left: 10px
+                    &:nth-child(last)
+                        margin-right: 0 
+                    &:nth-child(1)
+                        margin-left: 0                            
+    .main
+        width: 600px
+        position: relative
+        .content
+            margin-right: 50px
+            .content-section
+                margin-bottom: 50px
+                p
+                    margin-left: 20px
+@media (max-width: 960px)
+    section
+        margin: auto
+    .main
+        width: 100%
+    .aside
+        margin: auto
+        width: 100%
+        section
+            margin: auto
+            width: 100%
+    .container
+        flex-direction: column
+        margin: auto

@@ -1,0 +1,69 @@
+
+section
+    height: 100%
+    display: flex
+    h1
+        margin-left: 10px
+    .row
+        display: flex
+        width: 100%
+        .form-group
+            width: 100%
+            position: relative
+            input
+                padding: 15px
+                width: calc(100% - 40px)
+                margin: 10px
+                border: 2px solid black
+                outline: none
+                transition: .3s ease all
+                &:focus
+                    border: 2px solid #c20025
+                &:focus ~ label
+                    top: 12px
+                    left: 15px
+                    font-size: 12px
+                    color: #c20025
+            label
+                position: absolute
+                top: 25px
+                left: 26px
+                transition: .3s ease all
+            .active
+                top: 12px
+                left: 15px
+                font-size: 12px
+
+        textarea
+            width: calc(100% - 40px)
+            margin: 10px
+            padding: 15px
+            outline: none
+            border: 2px solid black
+            &:focus
+                border: 2px solid #c20025
+            &:focus ~ label
+                top: 12px
+                left: 15px
+                font-size: 12px
+                color: #c20025
+.cta
+    cursor: pointer
+    padding: 20px 40px 15px 40px
+    background: #c20025
+    border: 2px solid #c20025
+    color: #ffffff
+    text-align: center
+    text-decoration: none
+    font-size: 1.5em
+    transition: .3s ease all
+    justify-self: flex-end
+    margin: 10px
+    &:hover
+        background: lighten(#c20025, 10%)
+        border-color: lighten(#c20025, 10%)
+@media (max-width: 600px)
+    .row
+        flex-direction: column
+    .cta
+        width: calc(100% - 10px)
