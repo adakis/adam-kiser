@@ -7,11 +7,10 @@ footer
     box-shadow: 0px -10px 20px rgba(0,0,0, .3)
     background-image: url('/assets/images/poly_right.png')
     background-repeat: no-repeat
-    background-position-x: right
+    background-size: cover
     .container
         height: 60px
         display: flex
-        flex-direction: row
         justify-content: space-between
         align-items: center
     .socials, .contact
@@ -33,3 +32,8 @@ footer
             width: 30px
             margin: 0 5px
             background: #c20025
+
+@media (max-width: 600px)
+    .container
+        flex-direction: column
+        padding: 10px

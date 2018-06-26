@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation.component.sass']
 })
 export class NavigationComponent implements OnInit {
-
+  menu = false;
   constructor() { }
 
   ngOnInit() {

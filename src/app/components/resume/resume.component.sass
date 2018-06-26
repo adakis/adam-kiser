@@ -16,7 +16,14 @@
         .content
             margin-left: 50px
         .double-high
-            height: 300px
+            left: -165px
+            top: 70px
+            margin-bottom: 0
+            .smaller-h1
+                font-size: 20px
+                top: 34px
+                left: 140px
+                position: absolute
             .content-section
                 margin-bottom: 50px
      
@@ -55,7 +62,7 @@
                     &:nth-child(1)
                         margin-left: 0                            
     .main
-        width: 600px
+        max-width: 600px
         position: relative
         .content
             margin-right: 50px
@@ -63,17 +70,40 @@
                 margin-bottom: 50px
                 p
                     margin-left: 20px
+.cta-container
+    margin-top: 100px
+.cta
+    padding: 15px 40px
+    background: #c20025
+    color: #ffffff
+    text-align: center
+    text-decoration: none
+    font-size: 1.5em
+    transition: .3s ease all
+    &:hover
+        background: lighten(#c20025, 10%)                     
 @media (max-width: 960px)
     section
-        margin: auto
-    .main
         width: 100%
-    .aside
-        margin: auto
-        width: 100%
-        section
-            margin: auto
-            width: 100%
+        max-width: 600px
+    .desktop
+        display: none
+    .mobile
+        margin-left: 40px
+        padding-bottom: 50px
+        width: calc(100% - 40px)
+    .resume
+        padding: 120px 0
+    .main, .aside
+        margin-left: 40px
+        width: calc(100% - 40px)
     .container
         flex-direction: column
         margin: auto
+
+
+@media (min-width: 960px)
+    .desktop
+        display: block
+    .mobile
+        display: none

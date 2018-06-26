@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.sass']
 })
 export class HomeComponent implements OnInit {
-
+  videolink = '/assets/videos/home_compressed.mp4';
   constructor() { }
 
   ngOnInit() {

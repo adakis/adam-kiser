@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -15,10 +17,11 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'reel', component: ReelComponent },
-  { path: 'resume', component: ResumeComponent },
-  { path: 'contact', component: ContactComponent }
+  { path: 'about', component: AboutComponent, data: { state: 'about' } },
+  { path: 'reel', component: ReelComponent, data: { state: 'reel' } },
+  { path: 'resume', component: ResumeComponent, data: { state: 'resume' } },
+  { path: 'contact', component: ContactComponent, data: { state: 'contact' } },
+  { path: '**', component: HomeComponent }
 ];
 @NgModule({
   declarations: [
@@ -34,6 +37,8 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
     RouterModule.forRoot(routes),
   ],
   providers: [],
