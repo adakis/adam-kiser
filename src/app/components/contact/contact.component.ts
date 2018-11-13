@@ -14,7 +14,7 @@ export class ContactComponent implements OnInit {
     private http: HttpClient,
   ) { }
   submitForm() {
-    this.http.post('http://www.adamkiser.com/html_form_send.php',
+    this.http.post('https://formspree.io/kiser.adam@gmail.com',
     {'first_name': this.name, 'email': this.email, 'comments': this.message});
   }
   ngOnInit() {
