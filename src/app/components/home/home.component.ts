@@ -7,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   videolink = '/assets/videos/home_compressed.mp4';
-  constructor() { }
-
+  private anim: any;
+  public lottieConfig: Object;
+  constructor() {
+    this.lottieConfig = {
+      path: '/assets/data.json',
+      autoplay: true,
+      loop: true
+  };
+  }
   ngOnInit() {
-
     (<any>document).querySelector('#background-video').muted = 'muted';
   }
 }

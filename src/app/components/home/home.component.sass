@@ -1,12 +1,12 @@
 .video-background 
-    background: #000
     position: fixed
     top: 0
     right: 0
     bottom: 0
     left: 0
     z-index: -99
-
+.loading
+    opacity: 1
 .video-foreground,
 .video-background video 
     position: absolute
@@ -15,6 +15,7 @@
     width: 100%
     height: 100%
     pointer-events: none
+    background-color: rgba(0, 0, 0, 0) !important
 .dots
     height: 100%
     width: 100%
@@ -28,12 +29,22 @@
     background-size: cover
     z-index: -50
     opacity: .35
-
-.home
-    padding: 100px 10px
+.container
     height: 100%
     display: flex
+    max-width: 960px
+#lottie
+    overflow: hidden
+    transform: translate3d(0,0,0)
+    text-align: center
+    opacity: 1
+    position: relative
+.home
+    display: flex
     flex-direction: column
+    margin: auto
+    max-width: 960px
+    
     h1
         color: #000000
     .cta-container
@@ -48,6 +59,41 @@
         transition: .3s ease all
         &:hover
             background: lighten(#c20025, 10%) 
+.intro
+    font-size: 30px
+    font-weight: bold
+    .flipboard
+        height: 75px
+        overflow: hidden
+        width: 100%
+        position: relative
+        .flip-items
+            position: absolute
+            animation: 10s ease flip infinite
+        .flip-item
+            color: #c20025
+            text-transform: uppercase
+            font-weight: 900                                                                   
+@keyframes flip
+    0%
+        transform: translateY(0px)
+    12.5%
+        transform: translateY(0px)
+    25%
+        transform: translateY(-75px)
+    37.5%
+        transform: translateY(-75px)
+    50%
+        transform: translateY(-150px)
+    62.5%
+        transform: translateY(-150px)
+    75%
+        transform: translateY(-225px)
+    87.5%
+        transform: translateY(-225px)
+    100%
+        transform: translateY(-300px)     
+
 @media (min-aspect-ratio: 16/9) 
     .video-foreground  
         height: 300% 
@@ -62,3 +108,10 @@
     .video-background
         display: none
  
+@media (min-width: 900px)
+    .cta-container
+        margin-left: 45px
+@media (max-width: 900px)
+    .cta-container
+        margin-left: auto
+        margin-right: auto

@@ -1,7 +1,31 @@
 <div class="container">
 <div class="home">
-    <h1>Hi! I'm Adam.</h1>
-    <h1>I'm a professional Media Designer.</h1>
+    <lottie-animation-view id="lottie"
+    [options]="lottieConfig">
+</lottie-animation-view>
+<div class="intro">
+  Hi! I'm Adam.<br>
+  I'm a<span class="n">n</span>
+    <div class="flipboard">
+      <div class="flip-items">
+        <div class="flip-item">
+            Artist.
+        </div>
+        <div class="flip-item">
+            Animator.
+        </div>
+        <div class="flip-item">
+            Motion Designer.
+        </div>
+        <div class="flip-item">
+          Graphic Designer.
+        </div>
+        <div class="flip-item">
+            Artist.
+        </div>
+      </div>
+    </div>
+</div>
     <div class="cta-container">
         <a routerLink="reel" class="cta">
           REEL
@@ -11,9 +35,9 @@
 <div class="dots"></div>
 <div class="video-background">
   <div class="video-foreground">
-      <video id="background-video" muted loop autoplay volume="0"  poster="/assets/images/shattered_logo.png">
+      <video id="background-video" muted loop autoplay volume="0"  poster="data:image/gif,AAAA">
         <source src="/assets/videos/home_compressed.mp4" type="video/mp4">
       </video>      
     </div>
   </div>
-  </div>
+</div>
