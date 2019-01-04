@@ -30,14 +30,16 @@
     opacity: .35
 
 .home
-    padding: 100px 10px
-    height: 100%
+    // padding: 100px 10px
+    height: 100vh
     display: flex
     flex-direction: column
+    justify-content: center
     h1
         color: #000000
     .cta-container
         margin-top: 30px
+        margin-left: 45px
     .cta
         padding: 15px 40px
         background: #c20025
@@ -62,3 +64,7 @@
     .video-background
         display: none
  
+@media (max-width: 900px)
+    .home
+        .cta-container
+            margin-left: 20px

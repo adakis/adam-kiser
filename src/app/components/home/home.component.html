@@ -1,19 +1,20 @@
 <div class="container">
-<div class="home">
-    <h1>Hi! I'm Adam.</h1>
-    <h1>I'm a professional Media Designer.</h1>
+  <div class="home">
+    <div class="lottie-container">
+    <lottie-animation-view id="lottie" [options]="lottieConfig"></lottie-animation-view>
+  </div>  
     <div class="cta-container">
-        <a routerLink="reel" class="cta">
-          REEL
-        </a>
-    </div>
-</div>
-<div class="dots"></div>
-<div class="video-background">
-  <div class="video-foreground">
-      <video id="background-video" muted loop autoplay volume="0"  poster="/assets/images/shattered_logo.png">
-        <source src="/assets/videos/home_compressed.mp4" type="video/mp4">
-      </video>      
-    </div>
+          <a routerLink="reel" class="cta">
+            REEL
+          </a>
+      </div>
   </div>
+  <div class="dots"></div>
+  <div class="video-background">
+    <div class="video-foreground">
+        <video id="background-video" muted loop autoplay volume="0"  poster="data:image/gif,AAAA">
+          <source src="/assets/videos/home_compressed.mp4" type="video/mp4">
+        </video>      
+      </div>
+    </div>
   </div>
